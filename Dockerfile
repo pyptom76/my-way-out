@@ -15,8 +15,9 @@ RUN apk update && \
 ENV XDG_CONFIG_HOME /etc/caddy
 ENV XDG_DATA_HOME /usr/share/caddy
 
+
 COPY etc/Caddyfile /conf/Caddyfile
-COPY etc/config.json /conf/config.json
+COPY etc/config.json /workdir/config.json
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
